@@ -7,3 +7,6 @@
 5. If there are no bugs, deploy pipeline (CI/CD)
 6. Trigger the pipeline to write to a database
 7. Use the written data to create a Power BI dashboard
+
+# Architecture
+![Architecture diagram](./architecture/library.png)
