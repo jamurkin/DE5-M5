@@ -80,8 +80,8 @@ if __name__ == "__main__":
     parser.add_argument('--rel_path', type=str, required=True, help='Relative path to data CSV file.')
     parser.add_argument('--index', type=str, required=True, help='Specify index column.')
     parser.add_argument('--date_cols', nargs='*', type=str, help='(Optional) Specify date columns in CSV file.')
-    parser.add_argument('--loan_date_col', type=str, help="(Optional) Specify column that indicates when book was loaned out. If also specifying return_date_col, then calculates DaysLoaned column.")
-    parser.add_argument('--return_date_col', type=str, help="(Optional) Specify column that indicates when book was returned. If also specifying loan_date_col, then calculates DaysLoaned column.")
+    parser.add_argument('--loan_date_col', type=str, help="(Optional) Specify column that indicates when book was loaned out. If also specifying return_date_col, then calculates DaysOnLoan column.")
+    parser.add_argument('--return_date_col', type=str, help="(Optional) Specify column that indicates when book was returned. If also specifying loan_date_col, then calculates DaysOnLoan column.")
 
     args = parser.parse_args()
 
