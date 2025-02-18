@@ -94,8 +94,11 @@ if __name__ == "__main__":
     )
     print(f"{datetime.now()} | Completed data processing.")
 
-    print(books)
-    print(drop)
+    print(f"{datetime.now()} | Data to be loaded:")
+    print(books,'\n')
+    print(f"{datetime.now()} | Data to be ignored:")
+    print(drop,'\n')
+
     print(f"{datetime.now()} | Beginning SQL load")
     save_to_sql(books, 'Library', 'Books', 'localhost', 'Module5')
     print(f"{datetime.now()} | Completed SQL load. Loaded {len(books.index)} rows.")
