@@ -17,7 +17,7 @@
 To process Books data, use the following CLI command:
 ```
 cd application
-python clean_books.py --rel_path <path to CSV file>
+python clean_books.py --rel_path <path to CSV file> --index <index_col>
 ```
 This will load the cleaned dataframe to a SQL table in the Module5 database: Library.Books
 ### Options
@@ -30,7 +30,7 @@ python clean_books.py --rel_path <path> --dates <date1> <date2> ...
 #### Days on loan
 To calculate number of days on loan for a book, first specify all date columns, then specify loan and return date columns:
 ```
-python clean_books.py --rel_path <path> --dates <date1> <date2> ... --loan_date_col <loan_date> --return_date_col <return_date>
+python clean_books.py --rel_path <path> --dates <date1> <date2> ...--loan_date_col <loan_date> --return_date_col <return_date>
 ```
 This will add the 'DaysOnLoan' column to the processed dataframe.
 
@@ -43,9 +43,9 @@ If any null values exist in a row, then it will be flagged as invalid.
 If a loan date and return date are specified and exist in the final dataframe, then the code will check that the loan date is before the return date. If not, then the row will be flagged as invalid.
 
 ## Customers
-To process Books data, use the following CLI command:
+To process Customers data, use the following CLI command:
 ```
 cd application
-python clean_customers.py --rel_path <path to CSV file>
+python clean_customers.py --rel_path <path to CSV file> --index <index_col>
 ```
 This will load the cleaned dataframe to a SQL table in the Module5 database: Library.Customers
