@@ -18,6 +18,8 @@ To process a specific CSV data file, use the following CLI command:
 python application/__init__.py --path <path to CSV file> --index <index_col>
 ```
 This will clean the data found in the CSV file then print it to the console.
+
+This will involve removing any null records in the chosen index column and loading any records with null values in other columns to an additional table where they can be inspected and corrected.
 ## Options
 The following options are available for the CLI command:
 ```
