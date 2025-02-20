@@ -13,7 +13,7 @@
 
 
 # Data Cleaning
-To process Books data, use the following CLI command:
+To process a specific CSV data file, use the following CLI command:
 ```
 python application/__init__.py --path <path to CSV file> --index <index_col>
 ```
@@ -56,6 +56,15 @@ If any null values exist in a row, then it will be flagged as invalid.
 ### 2. Date check
 If a loan date and return date are specified and exist in the final dataframe, then the code will check that the loan date is before the return date. If not, then the row will be flagged as invalid.
 
+## Examples
+### Processing book data and loading to SQL with calculated columns
+```
+python application/__init__.py --path 'data/03_Library Systembook.csv' --index Id --table_name Books --date_cols "Book checkout" "Book Returned" --date_formats '\"%d/%m/%Y\"' '%d/%m/%Y' --loan_date_col "Book checkout" --return_date_col "Book Returned"
+```
+### Processing customer data and loading to SQL
+```
+python application/__init__.py --path 'data/03_Library SystemCustomers.csv' --index "Customer ID"  --table_name Customers  
+```
 # Data visualisation
 To help understand the processed data, as well as monitor recent runs of the process, a Power BI dashbaord has been created.
 ![Example dashboard](./architecture/dashboard.png)
