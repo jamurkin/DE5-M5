@@ -61,13 +61,27 @@ If a loan date and return date are specified and exist in the final dataframe, t
 ```
 python application/__init__.py --path 'data/03_Library Systembook.csv' --index Id --table_name Books --date_cols "Book checkout" "Book Returned" --date_formats '\"%d/%m/%Y\"' '%d/%m/%Y' --loan_date_col "Book checkout" --return_date_col "Book Returned"
 ```
+Before:
+
+![alt text](examples/books_before.png)
+
+After:
+
+![alt text](examples/books_after.png)
 ### Processing customer data and loading to SQL
 ```
 python application/__init__.py --path 'data/03_Library SystemCustomers.csv' --index "Customer ID"  --table_name Customers  
 ```
+Before:
+
+![alt text](examples/customers_before.png)
+
+After:
+
+![alt text](examples/customers_after.png)
 # Data visualisation
 To help understand the processed data, as well as monitor recent runs of the process, a Power BI dashbaord has been created.
-![Example dashboard](./architecture/dashboard.png)
+![Example dashboard](./examples/dashboard.png)
 
 This will show:
 1. How many books have been loaded, and how many of those are valid.
