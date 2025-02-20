@@ -30,6 +30,7 @@ class DataCleaner:
     
     def get_raw_data(self):
         self.raw_df = pd.read_csv(self.rel_path)
+        print(self.raw_df)
         return self.raw_df
         
     def index_clean(self):
