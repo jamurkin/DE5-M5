@@ -1,0 +1,9 @@
+/.venv
+/architecture
+/unit_testing
+
+.dockerignore
+.gitignore
+Dockerfile
+Documentation.md
+README.md
