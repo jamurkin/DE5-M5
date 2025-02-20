@@ -86,8 +86,8 @@ To help understand the processed data, as well as monitor recent runs of the pro
 This will show:
 1. How many books have been loaded, and how many of those are valid.
 2. How long it has taken to process both the books and customer data
-3. How many books are lonaed to customers
-4. A full list of the books that are loaned, with details of when they were checked out, when they were retruned, and how long they were borrowed.
+3. How many books are loaned to customers, with the amount loaned to each customer specified
+4. A full list of the books that are loaned, with details of when they were checked out, when they were retruned, and how long they were borrowed
 
 # Docker
 This application can be set up us a Docker container, making use of the [Dockerfile](./Dockerfile) and [.dockerignore](./.dockerignore) files.
